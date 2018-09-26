@@ -1,0 +1,34 @@
+#########################
+######## ALIASES ########
+#########################
+
+#Directories
+alias ls='ls -GFh'
+alias lsl='ls -l'
+alias lsa='ls -a'
+
+#cd shortcuts
+alias q='cl ~'
+alias g='git status'
+alias gl='git log --graph'
+alias clr='clear'
+
+#cd and ls combined
+alias cl='function _cdl() {
+	if [ $# -ne 1 ]
+	then
+		echo "usage: cl directory_name"
+		return
+	fi
+	if [ -d "$1" ] || [ $1 = "-" ]
+	then
+		cd "$1" ;
+		ls ".";
+  else
+		echo "\"$1\" is not found in the current directory";
+	fi
+}; 
+_cdl'
+
+export LSCOLORS=ExFxBxDxCxegedabagacad
+

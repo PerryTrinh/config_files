@@ -1,0 +1,35 @@
+
+"******************************
+"***Visual and Mouse Changes***
+"******************************
+syntax enable
+colorscheme southernlights
+
+set number
+highlight LineNr ctermfg=blue ctermbg=NONE
+
+set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
+set autoindent
+set foldmethod=indent
+set nofoldenable
+
+set mouse=a
+set wrap
+set linebreak
+
+"***************************
+"***General Abbreviations***
+"***************************
+"Display current file name
+nnoremap ff :echo @%<ENTER>
+
+"Mapping x to cut
+vnoremap x d
+
+"Mapping c to copy
+vnoremap c y
+
+"Quick comments
+iab comm /**/<LEFT><LEFT>
+iab commm /*<CR> *<CR>*/
+
