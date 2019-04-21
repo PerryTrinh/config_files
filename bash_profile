@@ -8,14 +8,17 @@ alias lsl='ls -l'
 alias lsa='ls -a'
 
 #extraneous commands
-lias fcowsay='fortune | cowsay'
 alias g='git status'
 alias gl='git log --graph'
+alias gb='git branch'
+alias gc='git checkout'
+alias reloadb='source ~/.bash_profile'
 alias clr='clear'
 alias cl='function _cdl() {
   cd "$1" && ls
 };
 _cdl'
+alias hash='shasum -a 256'
 
 # Setting PATH for Python 3.6
 # The original version is saved in .bash_profile.pysave
